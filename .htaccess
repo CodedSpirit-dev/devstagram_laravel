@@ -1,8 +1,22 @@
-Options +SymLinksIfOwnerMatch
-RewriteEngine On
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /devstagram_laravel/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
 
-# Allow Installatron requests
-RewriteCond %{REQUEST_FILENAME} deleteme\.\w+\.php
-RewriteRule (.*) - [L] 
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
 
-RewriteRule ^ index.php [L]
+<IfModule mod_negotiation.c>
+    Options -MultiViews
+</IfModule>
+
+<IfModule mod_php.c>
+    php_value upload_max_filesize 20M
+    php_value post_max_size 20M
+</IfModule>
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json
+</IfModule>

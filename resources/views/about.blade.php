@@ -12,6 +12,6 @@
 
     </head>
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-        <h1>Pagina de inicio</h1>
+        <h1>About us</h1>
     </body>
 </html>
