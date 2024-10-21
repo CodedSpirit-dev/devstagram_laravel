@@ -10,7 +10,7 @@
     @Vite('resources/js/app.js')
 </head>
 
-<body class="font-sans antialiased bg-zinc-900 dark:text-white/50">
+<body class="font-sans antialiased dark:text-white/50">
     <header class="p-5 border-b border-gray-200 dark:border-gray-700 dark:bg-black  text-white">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-3xl font-bold">
@@ -18,8 +18,8 @@
             </h1>
 
             <nav class="flex gap-2 items-center">
-                <a class="font-bold uppercase text-gray-300 text-sm" href="{{ url('/login') }}">Login</a>
-                <a class="font-bold uppercase text-gray-300 text-sm" href="{{ url('/register') }}">Register</a>
+                <a class="font-bold uppercase text-gray-600 text-sm" href="{{ url('/login') }}">Login</a>
+                <a class="font-bold uppercase text-gray-600 text-sm" href="{{ url('/register') }}">Register</a>
             </nav>
             
         </div>
